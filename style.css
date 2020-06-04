@@ -1,0 +1,182 @@
+header#cabecalho-topo{
+float: relative;
+left:5px;
+right:5px;
+background-color: green;
+color:white;
+text-align: center;
+padding: 5px 5px 5px 5px;
+box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+border-radius: 30px 30px 1px 1px;
+margin-top: auto; /* distancia 
+entre a borda da janela do site e o título
+pricipal*/
+margin-bottom: 10px;
+font-size: 10pt;
+font-family: Arial, sans-serif;
+}
+header#cabecalho-topo h1{
+text-align:center;
+left:0;
+position:relative;
+float: center;
+}
+
+
+*{
+margin:0;
+padding: 0;
+}
+.menu{
+
+width: 100%;
+height: 53px;
+background-color: rgb(66, 143, 66);
+font-family: Arial;
+border: 1px solid #606060;
+}
+.menu ul{
+list-style: none;
+position:relative;
+
+}
+.menu ul li{
+width: 180px;
+float: left;
+border: 1px solid #606060;
+
+}
+.menu a{
+padding: 15px;
+display: block;
+text-decoration: none;
+text-align: center;
+background-color: #ccc;
+color: #fff;
+
+}
+.menu ul ul{
+position: absolute;
+visibility: hidden;
+}
+.menu ul li:hover ul{
+visibility: visible;
+}
+.menu a:hover{
+background-color:rgb(0,0,128);
+color:#ccc;
+}
+.menu ul ul li{
+float: none;
+border-bottom: solid 1px #ccc;
+}
+.menu ul ul li a{
+background-color:rgb(206, 16, 16);
+}
+
+label[for="bt_menu"]{
+padding: 5px;
+background-color: #222;
+color:#fff;
+font-family: Arial;
+text-align: center;
+font-size: 30px;
+cursor:pointer;
+width:50px;
+height: 50px;
+}
+#bt_menu{
+display:none;
+}
+label[for="bt_menu"]{
+display: none;
+}
+@media(max-width: 800px){
+label[for="bt_menu"]{
+display: block;
+}
+#bt_menu:checked ~ .menu{
+margin:0;
+}
+.menu{
+margin-top:5px;
+margin-left: -150%;
+transition: all .4s;
+}
+.menu ul li{
+width: 100%;
+float:none;
+}
+.menu ul ul{
+position: static;
+overflow: hidden;
+max-height: 0;
+transition: all .4s;
+}
+.menu ul li:hover ul{
+height: auto;
+max-height: 200px;
+}
+}
+section#corpo{
+width: auto;
+border: 2px solid black;
+margin-top:10px;
+margin-bottom: 5px;
+margin-left: 5px;
+margin-right: 10px;
+font-family: Arial, sans-serif;
+}
+img#icone{
+width: 255px;
+height: 183px;
+float:right;
+box-shadow:  3px 2px 6px black;
+}
+.intro p{
+margin:20px;
+text-indent: 30px;
+text-align: justify;
+}
+
+section#corpo h1{
+background-color: green;
+border-radius: 1px 1px 1px 1px;
+text-align: center;
+color:white;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+font-size: 11pt;
+padding: 4px 1px 4px 1px;
+margin-left:10px;
+margin-right: 10px;
+margin-top:10px;
+font-family: Arial, sans-serif;
+}
+section#corpo a:hover {
+box-shadow: 1px 1px 1px 2px;
+background-color: yellowgreen;
+border-radius: 4px;
+padding: 1px 1px 1px 1px;
+}
+section#corpo li{
+color:black;
+font-size: 11pt;
+font-family: cursive, sans-serif;
+margin-top: 10px;
+margin-bottom:10px;
+margin-left: 50px;
+margin-right: 90px;
+font-family: Arial, sans-serif;
+}
+footer#rodape{
+clear: both;
+border-top: 1px solid #000000;
+margin-top: 20px;
+text-align: center;
+color: black;
+font-size: 7pt;
+font-family: "Comic Sans MS", cursive, sans-serif;
+margin-right:20px;
+margin-left:20px;
+margin-bottom: 20px;
+}

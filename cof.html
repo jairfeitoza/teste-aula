@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="style.css" media="all">-->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <title>Municípios-AM</title>
+<style>
+header#cabecalho-topo{
+float: relative;
+left:5px;
+right:5px;
+background-color: green;
+color:white;
+text-align: center;
+padding: 5px 5px 5px 5px;
+box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+border-radius: 30px 30px 1px 1px;
+margin-top: auto; 
+margin-bottom: 10px;
+font-size: 10pt;
+font-family: Arial, sans-serif;
+}
+header#cabecalho-topo h1{
+text-align:center;
+left:0;
+position:relative;
+float: center;
+}
+section#corpo{
+width:auto;
+text-align: center;
+position: middle;
+border: 2px solid black;
+margin-top:10px;
+margin-bottom: 10px;
+margin-left: 5px;
+margin-right: 5px;
+font-family: Arial, sans-serif;
+}
+section#corpo h1{
+    background-color: green;
+border-radius: 1px 1px 1px 1px;
+text-align: center;
+color:white;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+font-size: 11pt;
+padding: 4px 1px 4px 1px;
+margin-left:10px;
+margin-right: 10px;
+margin-top:10px;
+font-family: Arial, sans-serif;
+}
+section#corpo p{
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom:20px;
+    text-indent: 30px;
+    margin-left:20px;
+    margin-right: 20px;
+}
+*{
+margin:0;
+padding: 0;
+}
+.menu{
+width: 100%;
+height: 53px;
+background-color: rgb(66, 143, 66);
+font-family: Arial;
+border: 1px solid #606060;
+}
+.menu ul{
+list-style: none;
+position:relative;
+}
+.menu ul li{
+width: 180px;
+float: left;
+border: 1px solid #606060;
+}
+.menu a{
+padding: 15px;
+display: block;
+text-decoration: none;
+text-align: center;
+background-color: #ccc;
+color: #fff;
+}
+.menu ul ul{
+position: absolute;
+visibility: hidden;
+}
+.menu ul li:hover ul{
+visibility: visible;
+}
+.menu a:hover{
+background-color:rgb(0,0,128);
+color:#ccc;
+}
+.menu ul ul li{
+float: none;
+border-bottom: solid 1px #ccc;
+}
+.menu ul ul li a{
+background-color:rgb(206, 16, 16);
+}
+label[for="bt_menu"]{
+padding: 5px;
+background-color: #222;
+color:#fff;
+font-family: Arial;
+text-align: center;
+font-size: 30px;
+cursor:pointer;
+width:50px;
+height: 50px;
+}
+#bt_menu{
+display:none;
+}
+label[for="bt_menu"]{
+display: none;
+}
+@media(max-width: 800px){
+label[for="bt_menu"]{
+display: block;
+}
+#bt_menu:checked ~ .menu{
+margin:0;
+}
+.menu{
+margin-top:5px;
+margin-left: -150%;
+transition: all .4s;
+}
+.menu ul li{
+width: 100%;
+float:none;
+}
+.menu ul ul{
+position: static;
+overflow: hidden;
+max-height: 0;
+transition: all .4s;
+}
+.menu ul li:hover ul{
+height: auto;
+max-height: 200px;
+}
+}
+aside#lateral{
+width: 370px;
+float: left;
+margin-left: auto;
+margin-right: auto; 
+}
+aside#lateral h1{
+color:black;
+text-align:justify;
+font-size:12px;
+margin-left:60px;
+margin-right: -20px;
+margin-bottom: 30px;
+font-family: Arial, sans-serif;
+}
+video#filme{
+background-color: black;
+margin-bottom: 20px;
+margin-right:10px;
+margin-left: 5px;
+width: 375px;
+height: 250px;
+margin-top: 10px;
+/*border: 3px solid rgba(0, 0, 0, 0.5);*/
+border-radius: 20px 20px 20px 20px;
+}
+table#tabelaspec{
+border: 1px solid #606060;
+border-right: 1px solid #606060;
+border-spacing: 1px;
+float:right;
+margin-top: 20px;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 20px;
+}
+table#tabelaspec td{
+border: 1px solid #606060;
+padding: 10px;
+/*border-radius: 6px;*/
+text-align: center;
+vertical-align: middle;
+}
+table#tabelaspec td.ce{
+color: #ffffff;
+background-color: #606060;
+vertical-align: top;
+font-weight: bold;
+text-align: right;
+}
+table#tabelaspec td.cd{
+background-color: #cecece;
+}
+
+table#tabelaspec td.ca{
+    background-color: aqua;
+}
+footer#rodape{
+clear: both;
+border-top: 1px solid #000000;
+margin-top: 20px;
+text-align: center;
+color: black;
+font-size: 7pt;
+font-family: "Comic Sans MS", cursive, sans-serif;
+margin-right:20px;
+margin-left:20px;
+margin-bottom: 20px;
+}
+
+</style>
+</head>
+<body>
+    <header id="cabecalho-topo">
+        <h1> MUNICÍPIOS DO ESTADO DO AMAZONAS<br/>POR SUB-REGIÕES</h1>
+    </header>
+<input type="checkbox" id="bt_menu">
+<label for="bt_menu">&#9776;</label>
+<nav class="menu">
+<ul>
+    <li><a href="index.html"><b>&#127968; Home</b></a></li>
+    <li><a href="datasets.html"><b>&#x1f4cb; Datasets</b></a></li>
+    <li><a href="https://forms.gle/Z4vPKVFwDwjRg4wL8" target="_blank">
+            &#x1F4E7; <b>Fale Conosco</b></a>
+        <ul>
+            <li><a href="#">&#9749; <b>Me pague um café</b></a></li>
+        </ul>
+    </li>
+    <li><a href="sobre.html">&#128214; <b>Sobre</b></a></li>
+</ul>
+</nav>
+<section id="corpo">
+    
+        <h1>ME PAGUE UM CAFÉ</h1>
+    
+<p>O conteúdo deste site foi útil para você? Então, se você gostou do que viu 
+    por aqui, sinta-se à vontade para me pagar um <b>café</b> &#9749;!  O seu apoio será muito
+    bem-vindo e me ajudará a continuar criando conteúdo e mantendo este projeto.</p>
+    <p><b>O que significa o seu apoio:</b></br></p>
+    <p>Que você apoia o trabalho de profissionais independentes. Permitir que eu crie mais projetos livres, 
+        com isso, levando mais informações para cada vez mais pessoas interessadas em dados 
+        e/ou informações sobre os municípios do Estado do Amazonas.</p>
+
+        <table id="tabelaspec"> 
+        <!--<caption> Técnica do Google Glass <span>Mar/2013</span></caption>-->
+        
+        <tr><td class="ce">OPÇÃO 1</td><td class="ca"><b>CAIXA</b></td></tr>
+        <tr><td rowspan="2" class="ce">Informação</td><td class="cd"><b>Agência:</b> 3219 / <b>Operação:</b> 013</td></tr>
+        <tr><td class="cd"><b>Conta:</b> 671-9</td></tr>
+        
+        <tr><td class="ce">OPÇÃO 2</td><td class="ca"><b>BANCO DO BRASIL</b></td></tr>
+        <tr><td rowspan="2" class="ce">Informação</td><td class="cd"><b>Agência:</b> 3053-8</td></tr>
+        <tr><td class="cd"><b>Conta:</b> 40891-3</td></tr>
+        <!--rowspan: "2" significa que a celula câmera ocupa duas linhas -->
+        <!--<tr><td colspan="2">linha extra</td></tr>
+        colspan: "2" a célula "linha extra ocupa duas colunas"-->
+         </table>
+        </section>        
+<aside id="lateral">
+    <div class="video">
+        
+
+
+
+       <!-- <iframe id="filme" src="manaus.mp4" type="video/mp4" src="manaus.ogg" type="video/mp4" src="manaus.webm"
+            type="video/webm" frameborder="0"
+            allow="accelerometer;autoplay; encrypted-media; gyroscope;picture-in-picture" allowfullscreen></iframe>
+            <h1>Video: Manaus aéreo - A capital do Amazonas</h1>-->
+            
+            
+            <video id="filme" controls="controls">
+                <source src="manaus.mp4" type="video/mp4">
+                <source src="manaus.ogg" type="video/ogg">
+                <source src="manaus.webm" type="video/webm">
+              Desculpe esse video não pode ser carregado.
+              <h1>Video: Manaus aéreo - A capital do Amazonas</h1>
+
+
+
+
+    </div>
+</aside>
+
+
+<footer id="rodape">
+    <h2>Copyright &copy; 2020 | por Jair da S. Feitoza</br>
+    jsilvafeitoza@gmail.com</h2><h2>Principal fonte de Informação: IBGE - Instituto Brasileiro de Geografia e Estatística</h2>
+</footer>
+
+</body>
+</html>
